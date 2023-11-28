@@ -7,5 +7,11 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
   end
 
-  
+  def new
+  end
+
+  def create
+  end
+
+
 end
