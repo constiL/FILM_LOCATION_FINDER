@@ -1,17 +1,10 @@
 .navbar {
   background-color: #84C0C6;
-  display: flex;
-  justify-content: center space-between;
-}
-
-.nav-link {
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
+  display: flex-end;
 }
 
 .footer {
-  display: flex;
+  text-align: center;
   background-color: #BCC1BA;
   padding: 5px;
   margin: auto;
