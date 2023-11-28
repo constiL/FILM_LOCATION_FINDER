@@ -1,5 +1,5 @@
 class LocationsController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  skip_before_action :authenticate_user!, only: :index
 
   def index
     @locations = Location.all
@@ -11,6 +11,7 @@ class LocationsController < ApplicationController
 
   def create
     @location = Location.new(location_params)
+    @location.user = current_user
     if @location.save
       redirect_to location_path(@location)
     else
