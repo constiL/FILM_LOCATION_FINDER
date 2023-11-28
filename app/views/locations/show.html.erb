@@ -1,1 +1,11 @@
-<h1>show page for individual location</h1>
+<h1><%= @location.name%></h1>
+<img id="Main Image" src="<%= asset_path(@location.image_url) %>">
+<ul>
+<li>Description:<%= @location.description %></li>
+<li>Style: <%= @location.style %></li>
+<li>Rooms: <%= @location.rooms %></li>
+<li>Outdoor Space: <%= @location.outdoor_space? ? "Yes" : "No" %></li>
+</ul>
+
+<h2>Create a booking</h2>
+
