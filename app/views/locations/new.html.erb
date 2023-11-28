@@ -1,2 +1,12 @@
 <h1>New locations</h1>
-<%= render "form", location: @location %>
+<div class="container">
+  <%= simple_form_for @location do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :city %>
+    <%= f.input :style, collection: %w(modern minimalistic rustic chic mediterranean) %>
+    <%= f.input :outdoor_space %>
+    <%= f.input :image_url %>
+    <%= f.submit 'Add Location', class: "btn btn-primary" %>
+  <% end %>
+</div>
