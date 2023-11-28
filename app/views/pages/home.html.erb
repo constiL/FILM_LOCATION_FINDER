@@ -1,2 +1,29 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<html lang="en>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag 'styles', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="styles.css">
+  <title> Film Location Finder </title>
+</head>
+
+<body>
+  <div class="header">
+    <h1> Locations </h1>
+  </div>
+
+<div class="main-content">
+  <div class="listing-card">
+    <img src="<%= asset_path('location-1.jpg') %>" alt="image of location">
+    </div>
+  <div class="location-details">
+    <div class="location-title">Cool Spot</div>
+    <div class="location-description">bla bla bla</div>
+  </div>
+</div>
+
+</body>
+</html>
