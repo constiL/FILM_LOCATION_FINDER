@@ -1,4 +1,6 @@
 class LocationsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def index
     @locations = Location.all
   end
@@ -23,6 +25,6 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:name, :city, :description, :style, :rooms, :image_url)
+    params.require(:location).permit(:name, :city, :description, :outdoor_space, :style, :rooms, :image_url)
   end
 end
