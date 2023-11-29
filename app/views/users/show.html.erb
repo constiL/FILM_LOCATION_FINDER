@@ -9,7 +9,7 @@
   <% @locations.each do |location| %>
     <% location.bookings.each do |booking| %>
       <%= booking.location.name %>
-      <%= booking.date %>
+      <%= booking.dates %>
       <%= link_to 'Edit this booking', edit_user_booking_path(@user, booking) %>
     <% end %>
   <% end %>
