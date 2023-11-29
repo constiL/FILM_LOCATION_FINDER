@@ -9,4 +9,4 @@
   <li>Outdoor Space: <%= @location.outdoor_space? ? "Yes" : "No" %></li>
 </ul>
 
-<h2><%= link_to 'Create a Booking' %></h2>
+<h2><%= link_to 'Create a Booking', new_location_booking_path(@location) %></h2>
