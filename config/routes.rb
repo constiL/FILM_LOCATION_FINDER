@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[new create]
   end
 
-  resources :users, only: %i[show] do
+  resources :users, only: %i[] do
     resources :bookings, only: %i[edit update]
   end
   # Defines the root path route ("/")
   # root "posts#index"
-  get "users/:id", to: "users#show", as: "dashboard"
+  get "dashboard", to: "users#show", as: "dashboard"
 end

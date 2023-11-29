@@ -1,2 +1,19 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>My Dashboard</h1>
+<h2>My Bookings</h2>
+  <% @bookings.each do |booking| %>
+    <%= booking.dates %>
+    <%= booking.location.name %>
+  <% end %>
+
+<h2>Hosted Bookings</h2>
+  <% @locations.each do |location| %>
+    <% location.bookings.each do |booking| %>
+      <%= booking.date %>
+    <% end %>
+  <% end %>
+  <%# <%= link_to "Edit a booking", edit_user_booking_path() %>
+
+<h2>My Locations</h2>
+  <% @locations.each do|location| %>
+    <%= location.name %>
+  <% end %>
