@@ -1,20 +1,44 @@
-<%# <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p> %>
 
-<html lang="en>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <%= stylesheet_link_tag 'styles', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <link rel="stylesheet" href="styles.css">
-  <title> Film Location Finder </title>
-</head>
+<div class="navbar navbar-expand-sm">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "" %>
+    <% end %>
+    <%#= link_to "Home", "#", class: "nav-link" %>
+    <%= link_to "Locations", "#", class: "nav-link", style: "background-color: white;" %>
 
-<body>
-<link rel="stylesheet" href="css/style.css">
-  <div class="header">
-    <h1> Locations </h1>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "", class: " dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+        <div class="title">
+    <h1> Film Location Finder </h1>
   </div>
+    </div>
+  </div>
+</div>
+
+
+
 
   <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
   <div class="search-form-control form-group">
@@ -79,5 +103,11 @@
                 </div>
             </div>
 
-</body>
-</html>
+<div class="footer">
+  <div class="co">Location Finder co.
+  </div>
+  <div class="footer-copyright">This website was coded with
+      <i class="fas fa-heart"></i>
+       at Le Wagon
+    </div>
+</div>

@@ -7,3 +7,15 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+require "faker"
+
+puts "Cleaning the database...."
+Location.destroy_all
+
+puts "Creating 20 locations...."
+20.times do
+  location = Location.new(
+    name: 
+  )
+end
