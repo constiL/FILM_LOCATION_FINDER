@@ -2,6 +2,13 @@
 <ul>
   <% @locations.each do |location| %>
     <li><%= link_to location.name, location_path(location) %></li>
-    <li><img id="Main Image" src="<%= asset_path(location.image_url) %>"></li>
+    <img id="Main Image" src="<%= asset_path(location.image_url) %>">
   <% end %>
 </ul>
+
+<div id="map" style="width: 100%; height: 300px;"></div>
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
