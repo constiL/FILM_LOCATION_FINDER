@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: %i[] do
-    resources :bookings, only: %i[edit update]
+    resources :bookings, only: %i[edit update show]
   end
   # Defines the root path route ("/")
   # root "posts#index"
