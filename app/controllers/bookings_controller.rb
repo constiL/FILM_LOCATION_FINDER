@@ -10,13 +10,14 @@ class BookingsController < ApplicationController
     @booking.location = @location
     @booking.user = current_user
     if @booking.save
-      redirect_to locations_path
+      redirect_to dashboard_path
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def edit
+    @user = current_user
     @booking = Booking.find(params[:id])
   end
 
@@ -24,7 +25,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.user = current_user
     if @booking.update(booking_params)
-      redirect_to @booking, notice: "Booking was succesfully updated", status: :see_other
+      redirect_to dashboard_path, notice: "Booking was succesfully updated", status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end
@@ -37,6 +38,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:dates, :cost)
+    params.require(:booking).permit(:dates, :cost, :visited, :approved)
   end
 end
