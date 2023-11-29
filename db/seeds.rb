@@ -47,14 +47,14 @@ sunny_beach_house = {
 }
 
 mountain_retreat_lodge = {
-    name: 'Mountain Retreat Lodge',
-    address: '101 Pine Rd',
-    city: 'Lisbon',
-    rooms: 5,
-    user: User.all.sample,
-    style: styles.sample,
-    description: 'Escape to the mountains in this cozy log cabin.',
-    image_url: 'https://redmountainalpinelodge.com/wp-content/uploads/revslider/private-room/living.room_.bigger-1024x683.jpg'
+  name: 'Mountain Retreat Lodge',
+  address: '101 Pine Rd',
+  city: 'Lisbon',
+  rooms: 5,
+  user: User.all.sample,
+  style: styles.sample,
+  description: 'Escape to the mountains in this cozy log cabin.',
+  image_url: 'https://redmountainalpinelodge.com/wp-content/uploads/revslider/private-room/living.room_.bigger-1024x683.jpg'
 }
 
 pent_house = {
