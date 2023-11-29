@@ -1,0 +1,14 @@
+<h1><%= @booking.location.name %></h1>
+<br>
+<ul>
+  <li>Dates:<%= @booking.dates %></li>
+  <li><%= @booking.cost %></li>
+</ul>
+<ul>
+  <li>Description:<%= @booking.location.description %></li>
+  <li>City: <%= @booking.location.city %></li>
+  <li>Address:<%= @booking.location.address %></li>
+  <li>Style: <%= @booking.location.style %></li>
+  <li>Rooms: <%= @booking.location.rooms %></li>
+  <li>Outdoor Space: <%= @booking.location.outdoor_space? ? "Yes" : "No" %></li>
+</ul>
