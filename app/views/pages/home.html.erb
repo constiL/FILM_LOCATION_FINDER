@@ -1,2 +1,113 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="navbar navbar-expand-sm">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "" %>
+    <% end %>
+    <%#= link_to "Home", "#", class: "nav-link" %>
+    <%= link_to "Locations", "#", class: "nav-link", style: "background-color: white;" %>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "", class: " dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+        <div class="title">
+    <h1> Film Location Finder </h1>
+  </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get">
+  <div class="search-form-control form-group">
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+</form>
+
+<%# <div class="main-content">
+  <div class="listing-card">
+    <img src="<%= asset_path('location-1.jpg') %><%#" alt="image of location">
+  </div>
+  <div class="location-details">
+    <div class="location-title">Cool Spot</div>
+    <div class="location-description">bla bla bla</div>
+  </div>
+</div> %>
+
+    <div class="main-content">
+        <div class="row g-4 align-items-stretch">
+
+            <div class="col-6 col-lg-3">
+                <div class="card border-0 shadow rounded-top-1 h-100 position-relative">
+                    <img src="<%= asset_path('lisbon.jpg') %>" alt="Image of Location 1" class="w-100 rounded-top-1 object-fit-cover my-custom-class">
+                    <div class="card-body px-14 px-md-24 py-2 py-md-16">
+                        <a class="mb-0 fw-bold fs-14 fs-md-18 text-black text-decoration-none stretched-link" aria-label="Location 1" data-turbo-frame="_top" href="/location-1">Lisbon</a><span class="ms-2 fs-14 fs-md-18"></span>
+                        <p class="fs-12 mb-1 opacity-60">Next session: <span class="fw-600">Dec 4, 2023</span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+                <div class="card border-0 shadow rounded-top-1 h-100 position-relative">
+                    <img src="<%= asset_path('vienna.jpg') %>" alt="Image of Location 2" class="w-100 rounded-top-1 object-fit-cover my-custom-class">
+                    <div class="card-body px-14 px-md-24 py-2 py-md-16">
+                        <a class="mb-0 fw-bold fs-14 fs-md-18 text-black text-decoration-none stretched-link" aria-label="Location 2" data-turbo-frame="_top" href="/location-2">Vienna</a><span class="ms-2 fs-14 fs-md-18"></span>
+                        <p class="fs-12 mb-1 opacity-60">Next session: <span class="fw-600">Jan 15, 2024</span></p>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="col-6 col-lg-3">
+                <div class="card border-0 shadow rounded-top-1 h-100 position-relative">
+                    <img src="<%= asset_path('edinburgh.jpg') %>" alt="Image of Location 2" class="w-100 rounded-top-1 object-fit-cover my-custom-class">
+                    <div class="card-body px-14 px-md-24 py-2 py-md-16">
+                        <a class="mb-0 fw-bold fs-14 fs-md-18 text-black text-decoration-none stretched-link" aria-label="Location 2" data-turbo-frame="_top" href="/location-2">Edinburgh</a><span class="ms-2 fs-14 fs-md-18"></span>
+                        <p class="fs-12 mb-1 opacity-60">Next session: <span class="fw-600">Jan 15, 2024</span></p>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="col-6 col-lg-3">
+                <div class="card border-0 shadow rounded-top-1 h-100 position-relative">
+                    <img src="<%= asset_path('bari.jpg') %>" alt="Image of Location 2" class="w-100 rounded-top-1 object-fit-cover my-custom-class">
+                    <div class="card-body px-14 px-md-24 py-2 py-md-16">
+                        <a class="mb-0 fw-bold fs-14 fs-md-18 text-black text-decoration-none stretched-link" aria-label="Location 2" data-turbo-frame="_top" href="/location-2">Bari</a><span class="ms-2 fs-14 fs-md-18"></span>
+                        <p class="fs-12 mb-1 opacity-60">Next session: <span class="fw-600">Jan 15, 2024</span></p>
+                    </div>
+                </div>
+            </div>
+
+<div class="footer">
+  <div class="co">Location Finder co.
+  </div>
+  <div class="footer-copyright">This website was coded with
+      <i class="fas fa-heart"></i>
+       at Le Wagon
+    </div>
+</div>
