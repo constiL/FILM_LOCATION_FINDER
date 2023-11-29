@@ -2,18 +2,20 @@
 <h2>My Bookings</h2>
   <% @bookings.each do |booking| %>
     <%= booking.dates %>
-    <%= booking.location.name %>
+    <%= link_to booking.location.name, user_booking_path(@user, booking) %>
   <% end %>
 
 <h2>Hosted Bookings</h2>
   <% @locations.each do |location| %>
     <% location.bookings.each do |booking| %>
+      <%= booking.location.name %>
       <%= booking.date %>
+      <%= link_to 'Edit this booking', edit_user_booking_path(@user, booking)
     <% end %>
   <% end %>
-  <%# <%= link_to "Edit a booking", edit_user_booking_path() %>
+
 
 <h2>My Locations</h2>
   <% @locations.each do|location| %>
-    <%= location.name %>
+    <%= link_to location.name, location_path(location) %>
   <% end %>
