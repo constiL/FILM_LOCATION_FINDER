@@ -1,0 +1,6 @@
+<div class='bookingcard'>
+  <img id="Main Image" src="<%= asset_path(booking.location.image_url) %>">
+  <%= link_to booking.location.name, user_booking_path(booking.user, booking) %>
+  <p><%= booking.start_date %> - <%= booking.end_date %></p>
+
+</div>

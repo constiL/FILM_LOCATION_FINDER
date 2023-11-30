@@ -1,0 +1,5 @@
+<div class='location_dash_card'>
+  <%= booking.location.name %>
+  <p><%= booking.start_date %> - <%= booking.end_date %></p>
+  <%= link_to 'Edit this booking', edit_user_booking_path(@user, booking) %>
+</div>
