@@ -28,6 +28,7 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
+    @booking = Booking.new
   end
 
   def destroy
