@@ -23,9 +23,16 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
   end
 
+  def destroy
+    @location = Location.find(params[:id])
+    @location.user = current_user
+    @location.destroy!
+    redirect_to locations_path, notice: "Location was successfully destroyed", status: :see_other
+  end
+
   private
 
   def location_params
-    params.require(:location).permit(:name, :city, :description, :outdoor_space, :style, :rooms, :image_url)
+    params.require(:location).permit(:name, :city, :description, :outdoor_space, :style, :rooms, :image_url, :cost_per_day) # rubocop:disable Layout/LineLength
   end
 end
