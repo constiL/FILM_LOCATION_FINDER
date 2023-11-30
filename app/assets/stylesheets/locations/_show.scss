@@ -1,0 +1,24 @@
+.location {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+}
+
+#title_image {
+height: 450px;
+width: 800px;
+background-size: cover;
+background-position: center;
+}
+.booking_container {
+height: 50px;
+width: 400px;
+}
+
+.trashcan {
+  margin: 20px;
+}
+
+.booking_form {
+margin-left: 20px;
+}
