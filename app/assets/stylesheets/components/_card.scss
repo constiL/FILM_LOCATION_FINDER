@@ -8,6 +8,8 @@
   border-radius: 10px;
   background-size: cover;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  position: relative;
 }
 
 .dashcard:hover {  box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.5); }
@@ -28,4 +30,18 @@
   justify-content: center;
   align-items: center;
   vertical-align: center;
+}
+.dashcard .card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dashcard .new-location {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #9FB7B9;
 }
