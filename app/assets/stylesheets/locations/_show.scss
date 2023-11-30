@@ -1,0 +1,34 @@
+.location {
+display: flex;
+align-items: flex-start;
+justify-content: center;
+}
+
+#title_image {
+height: 500px;
+width: 800px;
+background-size: cover;
+background-position: center;
+}
+.booking_container {
+
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.trashcan {
+  margin: 20px;
+}
+
+.booking_form {
+margin-left: 20px;
+}
+
+.btn {
+  color: #ffffff;
+  border: 5px white;
+  border-radius: 5px;
+  background-color: #9FB7B9;
+}
