@@ -16,8 +16,10 @@
       <% location.bookings.each do |booking| %>
         <%= link_to edit_user_booking_path(@user, booking) do %>
           <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= booking.location.image_url %>)" >
-            <h4><%= booking.location.name %></h4>
-            <p><%= booking.start_date %> - <%= booking.end_date %></p>
+            <div class='card-content'>
+              <h4><%= booking.location.name %></h4>
+              <h6><%= booking.start_date %> - <%= booking.end_date %></h6>
+            </div>
           </div>
         <% end %>
       <% end %>
@@ -33,7 +35,7 @@
   <% @locations.each do |location| %>
     <%= link_to location_path(location) do %>
       <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= location.image_url %>)">
-        <%= location.name %>
+        <h4><%= location.name %></h4>
       </div>
     <% end %>
   <% end %>
