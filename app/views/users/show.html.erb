@@ -3,7 +3,13 @@
   <h2>My Bookings</h2>
   <div class='flexbox'>
     <% @bookings.each do |booking| %>
-      <%= render 'components/bookingcard', booking: booking %>
+      <%= link_to user_booking_path(booking.user, booking) do %>
+        <div class='bookingcard'>
+          <img id="Main Image" src="<%= asset_path(booking.location.image_url) %>">
+          <%= booking.location.name %>
+          <p><%= booking.start_date %> - <%= booking.end_date %></p>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
@@ -11,13 +17,22 @@
   <div class='flexbox'>
     <% @locations.each do |location| %>
       <% location.bookings.each do |booking| %>
-        <%= render 'components/host_booking_card', booking: booking %>
+        <%= link_to edit_user_booking_path(@user, booking) do %>
+          <div class='bookingcard'>
+            <img id="Main Image" src="<%= asset_path(booking.location.image_url) %>">
+            <%= booking.location.name %>
+            <p><%= booking.start_date %> - <%= booking.end_date %></p>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
 
 
 <h2>My Locations</h2>
+<%= link_to new_location_path do %>
+  <i class="fa-solid fa-plus fa-2xl" style="color: #FCFCFC;"></i>
+<% end %>
 <div class='flexbox'>
   <% @locations.each do |location| %>
     <%= link_to location_path(location) do %>
