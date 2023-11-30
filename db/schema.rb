@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_30_111948) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "cost"
+    t.integer "offer"
     t.boolean "visited"
     t.boolean "approved"
     t.bigint "user_id", null: false
@@ -40,9 +40,9 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_30_111948) do
     t.text "description"
     t.string "city"
     t.string "address"
-    t.integer "cost_per_day"
     t.float "latitude"
     t.float "longitude"
+    t.integer "cost_per_day"
     t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
