@@ -1,5 +1,7 @@
+
 <h1><%= @location.name%></h1>
 <img id="Main Image" src="<%= asset_path(@location.image_url) %>">
+<div>
 <ul>
   <li>Description:<%= @location.description %></li>
   <li>City: <%= @location.city %></li>
@@ -9,6 +11,16 @@
   <li>Cost Per Day: <%= @location.cost_per_day %></li>
   <li>Outdoor Space: <%= @location.outdoor_space? ? "Yes" : "No" %></li>
 </ul>
+</div>
+
+<div>
+<h1>New Booking</h1>
+  <%= simple_form_for [@location, @booking] do |f| %>
+    <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+    <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+    <%= f.input :offer %>
+    <%= f.submit 'Request Booking', class: "btn btn-primary" %>
+  <% end %>
+</div>
 
 <%= link_to "Delete", location_path(@location), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }%>
-<h2><%= link_to 'Create a Booking', new_location_booking_path(@location) %></h2>
