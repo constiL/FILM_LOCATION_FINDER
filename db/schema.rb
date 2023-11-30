@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_30_111917) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_30_111948) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "cost"
+    t.integer "offer"
     t.boolean "visited"
     t.boolean "approved"
     t.bigint "user_id", null: false
@@ -42,6 +42,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_30_111917) do
     t.string "address"
     t.float "latitude"
     t.float "longitude"
+    t.integer "cost_per_day"
     t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
