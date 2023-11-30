@@ -1,8 +1,9 @@
 <h1>New Booking</h1>
 <div class="container">
   <%= simple_form_for [@location, @booking] do |f| %>
-    <%= f.input :dates %>
-    <%= f.input :cost %>
+    <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+    <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+    <%= f.input :offer %>
     <%= f.submit 'Request Booking', class: "btn btn-primary" %>
   <% end %>
 </div>
