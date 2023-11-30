@@ -1,26 +1,22 @@
-<h1>My Dashboard</h1>
-
-  <h2>My Bookings</h2>
+  <h2>My Upcoming Filming</h2>
   <div class='flexbox'>
     <% @bookings.each do |booking| %>
       <%= link_to user_booking_path(booking.user, booking) do %>
-        <div class='bookingcard'>
-          <img id="Main Image" src="<%= asset_path(booking.location.image_url) %>">
-          <%= booking.location.name %>
-          <p><%= booking.start_date %> - <%= booking.end_date %></p>
+        <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= booking.location.image_url %>)">
+          <h4><%= booking.location.name %></h4>
+          <h6><%= booking.start_date %> - <%= booking.end_date %></h6>
         </div>
       <% end %>
     <% end %>
   </div>
 
-  <h2>Hosted Bookings</h2>
+  <h2>Who is coming to film?</h2>
   <div class='flexbox'>
     <% @locations.each do |location| %>
       <% location.bookings.each do |booking| %>
         <%= link_to edit_user_booking_path(@user, booking) do %>
-          <div class='bookingcard'>
-            <img id="Main Image" src="<%= asset_path(booking.location.image_url) %>">
-            <%= booking.location.name %>
+          <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= booking.location.image_url %>)" >
+            <h4><%= booking.location.name %></h4>
             <p><%= booking.start_date %> - <%= booking.end_date %></p>
           </div>
         <% end %>
@@ -36,7 +32,7 @@
 <div class='flexbox'>
   <% @locations.each do |location| %>
     <%= link_to location_path(location) do %>
-      <div class='location_dash_card' style="background-image: url(<%= location.image_url %>)">
+      <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= location.image_url %>)">
         <%= location.name %>
       </div>
     <% end %>
