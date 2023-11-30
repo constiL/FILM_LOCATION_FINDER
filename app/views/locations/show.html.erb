@@ -6,7 +6,9 @@
   <li>Address:<%= @location.address %></li>
   <li>Style: <%= @location.style %></li>
   <li>Rooms: <%= @location.rooms %></li>
+  <li>Cost Per Day: <%= @location.cost_per_day %></li>
   <li>Outdoor Space: <%= @location.outdoor_space? ? "Yes" : "No" %></li>
 </ul>
 
+<%= link_to "Delete", location_path(@location), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }%>
 <h2><%= link_to 'Create a Booking', new_location_booking_path(@location) %></h2>
