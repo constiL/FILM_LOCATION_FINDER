@@ -1,8 +1,8 @@
 <h1>All locations</h1>
+
 <ul>
   <% @locations.each do |location| %>
-    <li><%= link_to location.name, location_path(location) %></li>
-    <img id="Main Image" src="<%= asset_path(location.image_url) %>">
+<%= render 'components/location_card', location: location %>
   <% end %>
 </ul>
 
