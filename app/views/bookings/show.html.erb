@@ -1,8 +1,8 @@
 <h1><%= @booking.location.name %></h1>
 <br>
 <ul>
-  <li>Dates:<%= @booking.dates %></li>
-  <li><%= @booking.offer %></li>
+  <li>Dates of booking: <%= @booking.start_date %> - <%= @booking.end_date %></li>
+  <li>Offer: <%= @booking.cost %></li>
 </ul>
 <ul>
   <li>Description:<%= @booking.location.description %></li>

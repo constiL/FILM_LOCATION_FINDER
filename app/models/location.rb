@@ -9,4 +9,7 @@ class Location < ApplicationRecord
   validates :rooms, numericality: { greater_than_or_equal_to: 1 }
   validates :city, presence: true
   validates :cost_per_day, presence: true, numericality: { only_integer: true }
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
