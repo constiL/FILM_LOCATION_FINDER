@@ -1,21 +1,22 @@
 <h1>My Dashboard</h1>
 <h2>My Bookings</h2>
   <% @bookings.each do |booking| %>
-    <%= booking.dates %>
     <%= link_to booking.location.name, user_booking_path(@user, booking) %>
+    <p><%= booking.start_date %> - <%= booking.end_date %></p>
   <% end %>
 
 <h2>Hosted Bookings</h2>
   <% @locations.each do |location| %>
     <% location.bookings.each do |booking| %>
       <%= booking.location.name %>
-      <%= booking.dates %>
+      <p><%= booking.start_date %> - <%= booking.end_date %></p>
       <%= link_to 'Edit this booking', edit_user_booking_path(@user, booking) %>
     <% end %>
   <% end %>
 
 
 <h2>My Locations</h2>
+<%= link_to "+", new_location_path %>
   <% @locations.each do|location| %>
     <%= link_to location.name, location_path(location) %>
   <% end %>
