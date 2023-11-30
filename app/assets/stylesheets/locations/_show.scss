@@ -5,14 +5,17 @@ justify-content: center;
 }
 
 #title_image {
-height: 450px;
+height: 500px;
 width: 800px;
 background-size: cover;
 background-position: center;
 }
 .booking_container {
-height: 50px;
-width: 400px;
+
+}
+
+ul {
+  list-style-type: circle;
 }
 
 .trashcan {
@@ -21,4 +24,11 @@ width: 400px;
 
 .booking_form {
 margin-left: 20px;
+}
+
+.btn {
+  color: #ffffff;
+  border: 5px white;
+  border-radius: 5px;
+  background-color: #9FB7B9;
 }
