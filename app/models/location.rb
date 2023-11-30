@@ -1,6 +1,6 @@
 class Location < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
   validates :name, :image_url, presence: true, uniqueness: true
   validates :name, length: { minimum: 5 }

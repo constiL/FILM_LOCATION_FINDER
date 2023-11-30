@@ -11,6 +11,7 @@
 styles = %w[modern minimalistic rustic chic mediterranean]
 puts "Cleaning the database...."
 Location.destroy_all
+User.create!(email: "colerner@me.com", password: "123456")
 
 puts "Creating 10 locations...."
 cozy_cabin =   {
@@ -21,7 +22,7 @@ cozy_cabin =   {
   user: User.all.sample,
   style: styles.sample,
   description: 'A charming cabin in a peaceful setting.',
-  image_url: 'https://example.com/cozy-cabin.jpg'
+  image_url: 'https://gallery.streamlinevrs.com/units-gallery/00/07/F6/image_161211384.jpeg'
 }
 
 urban_lost_oasis = {
@@ -32,7 +33,7 @@ urban_lost_oasis = {
   user: User.all.sample,
   style: styles.sample,
   description: 'A stylish loft in the heart of the city.',
-  image_url: 'https://example.com/urban-loft.jpg'
+  image_url: 'https://images.ctfassets.net/0gqf8nju6pz6/3cOPiQIUvo8jlkT1Qq2dkY/63a730409462d2366e8bcf6f4fae28a5/image2.jpg'
 }
 
 sunny_beach_house = {
@@ -43,18 +44,18 @@ sunny_beach_house = {
   user: User.all.sample,
   style: styles.sample,
   description: 'A beautiful beach house with stunning ocean views.',
-  image_url: 'https://example.com/beach-house.jpg'
+  image_url: 'https://thecottagejournal.com/wp-content/uploads/2022/06/TheCottageJournal_Exterior-1.jpg'
 }
 
 mountain_retreat_lodge = {
-    name: 'Mountain Retreat Lodge',
-    address: '101 Pine Rd',
-    city: 'Lisbon',
-    rooms: 5,
-    user: User.all.sample,
-    style: styles.sample,
-    description: 'Escape to the mountains in this cozy log cabin.',
-    image_url: 'https://example.com/mountain-lodge.jpg'
+  name: 'Mountain Retreat Lodge',
+  address: '101 Pine Rd',
+  city: 'Lisbon',
+  rooms: 5,
+  user: User.all.sample,
+  style: styles.sample,
+  description: 'Escape to the mountains in this cozy log cabin.',
+  image_url: 'https://redmountainalpinelodge.com/wp-content/uploads/revslider/private-room/living.room_.bigger-1024x683.jpg'
 }
 
 pent_house = {
@@ -65,7 +66,7 @@ pent_house = {
   user: User.all.sample,
   style: styles.sample,
   description: 'Experience luxury living in this high-rise penthouse.',
-  image_url: 'https://example.com/luxury-penthouse.jpg'
+  image_url: 'https://s.hdnux.com/photos/01/33/20/00/23920647/3/1200x0.jpg'
 }
 
 riverside = {
@@ -76,7 +77,7 @@ riverside = {
   user: User.all.sample,
   style: styles.sample,
   description: 'A charming cottage by the river for a peaceful getaway.',
-  image_url: 'https://example.com/riverside-cottage.jpg'
+  image_url: 'https://images.snaptrip.com/optim/image/file/17804307/hero_sc_14664365275696_932942_21-j.jpg'
 }
 
 downtown_loft = {
@@ -87,7 +88,7 @@ downtown_loft = {
   user: User.all.sample,
   style: styles.sample,
   description: 'Live in the heart of the city with this trendy loft space.',
-  image_url: 'https://example.com/downtown-loft.jpg'
+  image_url: 'https://www.flooringcanada.ca/root/clientImages/CX7979WEB/empty-big-413.jpg'
 }
 
 elegant_manor = {
@@ -98,7 +99,7 @@ elegant_manor = {
     user: User.all.sample,
     style: styles.sample,
     description: 'Step back in time with this grand manor house.',
-    image_url: 'https://example.com/manor-house.jpg'
+    image_url: 'https://st.hzcdn.com/simgs/pictures/exteriors/elegant-georgian-manor-house-and-garden-douglas-c-lynn-llc-landscape-architecture-img~9c117e7f0038fed7_4-9190-1-370252c.jpg'
 }
 lakeview_cabin = {
   name: 'Lakeview Cabin',
@@ -108,7 +109,7 @@ lakeview_cabin = {
   user: User.all.sample,
   style: styles.sample,
   description: 'Enjoy serene lake views from this cozy cabin.',
-  image_url: 'https://example.com/lakeview-cabin.jpg'
+  image_url: 'https://images.adsttc.com/media/images/5f5f/c524/63c0/178c/4900/09a8/large_jpg/The_Lake_Cabin_High_Res_(59).jpg?1600111853'
 }
 
 zen_garden = {
@@ -119,7 +120,7 @@ zen_garden = {
   user: User.all.sample,
   style: styles.sample,
   description: 'Find peace and relaxation in this zen garden retreat.',
-  image_url: 'https://example.com/zen-retreat.jpg'
+  image_url: 'https://amitmurao.com/wp-content/uploads/2019/08/amitmurao_beautiful_zen_garden_ideas_1519b0d4-898a-46b7-8d8d-59485f05a2e9.jpg'
 }
 
 [cozy_cabin, urban_lost_oasis, sunny_beach_house, mountain_retreat_lodge, pent_house, riverside, downtown_loft, elegant_manor, lakeview_cabin, zen_garden]. each do |attributes|
