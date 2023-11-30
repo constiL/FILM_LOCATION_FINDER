@@ -13,6 +13,44 @@
   </head>
 
   <body>
+  <div class="navbar navbar-expand-sm">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "" %>
+    <% end %>
+    <%#= link_to "Home", "#", class: "nav-link" %>
+    <%= link_to "Locations", locations_path, class: "nav-link", style: "color: white" %>
+    <%= link_to "About", about_path, class: "nav-link", style: "color: white" %>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link", style: "color: white" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link", style: "color: white" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "", class: " dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link", style: "color: white" %>
+          </li>
+        <% end %>
+      </ul>
+        <div class="title">
+    <h1> Film Location Finder </h1>
+  </div>
+    </div>
+  </div>
+</div>
   <div class="container">
     <%= yield %>
   </body>
