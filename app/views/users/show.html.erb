@@ -1,5 +1,5 @@
   <h2>My Upcoming Filming</h2>
-  <div class='flexbox'>
+  <div class='my-grid'>
     <% @bookings.each do |booking| %>
       <%= link_to user_booking_path(booking.user, booking) do %>
         <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= booking.location.image_url %>)">
@@ -19,7 +19,7 @@
   </div>
 
   <h2>Who is coming to film?</h2>
-  <div class='flexbox'>
+  <div class='my-grid'>
     <% @locations.each do |location| %>
       <% location.bookings.each do |booking| %>
         <%= link_to edit_user_booking_path(@user, booking) do %>
@@ -41,7 +41,7 @@
   </div>
 
 <h2>My Locations</h2>
-<div class='flexbox'>
+<div class='my-grid'>
   <%= link_to new_location_path do %>
     <div class='dashcard' style="background: #9FB7B9" >
       <div class='new-location'>
