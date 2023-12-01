@@ -1,9 +1,8 @@
 // Specific CSS for your home-page
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #BCC1BA;
+  background-color: white;
 }
 
 .main-content {
@@ -20,20 +19,6 @@ body {
   border-radius: 10px;
 }
 
-h1, h2, h3, ul, p, body {
-  color: white;
-}
-
-.wrapper {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
-
-.footer {
-  flex: 1;
-}
-
-.container {
-  margin-top: 10git0px;
-}
+ h1, h2, h3, ul, p, body {
+  color: black;
+ }
