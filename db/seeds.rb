@@ -11,9 +11,13 @@
 styles = %w[modern minimalistic rustic chic mediterranean]
 puts "Cleaning the database...."
 Location.destroy_all
+User.destroy_all
 User.create!(email: "colerner@me.com", password: "123456")
+User.create!(email: "jamie@jamie.com", password: "123456")
+User.create!(email: "thomas@thomas.com", password: "123456")
+User.create!(email: "bruno@bruno.com", password: "123456")
 
-puts "Creating 10 locations...."
+puts "Creating 12 locations...."
 cozy_cabin =   {
   name: 'Cozy Cabin Retreat',
   address: 'Hasenauerstr 2, 1190 Wien',
@@ -109,17 +113,6 @@ elegant_manor = {
     image_url: 'https://st.hzcdn.com/simgs/pictures/exteriors/elegant-georgian-manor-house-and-garden-douglas-c-lynn-llc-landscape-architecture-img~9c117e7f0038fed7_4-9190-1-370252c.jpg',
     cost_per_day: "1000"
 }
-lakeview_cabin = {
-  name: 'Lakeview Cabin',
-  address: 'John-F.-Kennedy-Platz, 10825 Berlin, Germany',
-  city: 'Berlin',
-  rooms: 3,
-  user: User.all.sample,
-  style: styles.sample,
-  description: 'Enjoy serene lake views from this cozy cabin.',
-  image_url: 'https://images.adsttc.com/media/images/5f5f/c524/63c0/178c/4900/09a8/large_jpg/The_Lake_Cabin_High_Res_(59).jpg?1600111853',
-  cost_per_day: "50"
-}
 
 zen_garden = {
   name: 'Zen Garden Retreat',
@@ -133,7 +126,43 @@ zen_garden = {
   cost_per_day: "1500"
 }
 
-[cozy_cabin, urban_lost_oasis, sunny_beach_house, mountain_retreat_lodge, pent_house, riverside, downtown_loft, elegant_manor, lakeview_cabin, zen_garden]. each do |attributes|
+mountain_chalet = {
+  name: 'Mountain Chalet',
+  address: 'Lastenstraße 38/EG, 4020 Linz',
+  city: 'Linz',
+  rooms: 6,
+  user: User.all.sample,
+  style: styles.sample,
+  description: 'Escape to the mountains in this spacious chalet.',
+  image_url: 'https://www.daschaletdorf.com/upload/heading/pure-pitztal-mountain-chalet-plus-deluxe-or-family-1500x750.jpg',
+  cost_per_day: "100"
+}
+
+secluded_island_villa = {
+  name: 'Secluded Island Villa',
+  address: '00165 Rome, Metropolitan City of Rome Capital, Italy',
+  city: 'Rome',
+  rooms: 4,
+  user: User.all.sample,
+  style: styles.sample,
+  description: 'Experience luxury on a secluded island with this villa.',
+  image_url: 'https://www.oluxuryvillas.com/img/villa/image/private_island_villa_in_randheli_maldives113-0.jpg',
+  cost_per_day: "450"
+}
+
+artistic_loft_space = {
+  name: 'Artistic Loft Space',
+  address: 'Rathausgasse 9, 81241 München, Germany',
+  city: 'Munich',
+  rooms: 2,
+  user: User.all.sample,
+  style: styles.sample,
+  description: 'Live and create in this inspiring loft space.',
+  image_url: 'https://www.bostonmagazine.com/wp-content/uploads/sites/2/2020/06/summer-1.jpg',
+  cost_per_day: "350"
+}
+
+[artistic_loft_space, secluded_island_villa, mountain_chalet, cozy_cabin, urban_lost_oasis, sunny_beach_house, mountain_retreat_lodge, pent_house, riverside, downtown_loft, elegant_manor, zen_garden]. each do |attributes|
   location = Location.create!(attributes)
   puts "Created #{location.name}"
 end
