@@ -2,8 +2,20 @@
 
 <ul>
   <% @locations.each do |location| %>
-<%= render 'components/location_card', location: location %>
+    <%= link_to location_path(location), class: 'location_card', style: 'text-decoration: none;' do %>
+      <div class='card-content location_image' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= location.image_url %>)">
+        <h4 style="color: white;"><%= location.name %></h4>
+      </div>
+    <% end %>
   <% end %>
+</ul>
+
+<div id="map" style="width: 100%; height: 300px;"></div>
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 </ul>
 
 <div id="map" style="width: 100%; height: 300px;"></div>
