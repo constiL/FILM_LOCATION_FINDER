@@ -4,48 +4,49 @@
 //   gap: 20px;
 // }
 
-.location_card {
-  border: 1px solid #9FB7B9;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 15px;
-  background-color: #F2E2D2;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  display: inline-block;
-  width: 30%;
-  box-sizing: border-box;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
+// .location_card {
+//   border: 1px solid #9FB7B9;
+//   border-radius: 8px;
+//   margin: 10px;
+//   padding: 15px;
+//   background-color: #F2E2D2;
+//   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+//   display: inline-block;
+//   width: 30%;
+//   box-sizing: border-box;
+//   text-align: center;
+//   position: relative;
+//   overflow: hidden;
+// }
 
-.location_card h2 {
-  color: #333;
-}
+// .location_card h2 {
+//   color: #333;
+// }
 
-.location_card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
+// .location_card img {
+//   max-width: 100%;
+//   height: auto;
+//   border-radius: 8px;
+//   margin-bottom: 10px;
+// }
 
-h1 {
-  color: #070707;
-}
+// h1 {
+//   color: #070707;
+// }
 
-.location_card a {
-  text-decoration: none;
-  color: inherit;
-}
+// .location_card a {
+//   text-decoration: none;
+//   color: inherit;
+// }
 
-.location_card a:hover {
-  text-decoration: none;
-}
+// .location_card a:hover {
+//   text-decoration: none;
+// }
 
-.location_image {
-  height: 120px;
-  background-size: cover;
+// .location_image {
+//   height: 120px;
+//   background-size: cover;
+
 .dashcard {
   color: white;
   text-align: center;
@@ -66,6 +67,8 @@ h1 {
   margin: 5px;
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .dashcard img {
@@ -92,5 +95,4 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #9FB7B9;
-}
 }
