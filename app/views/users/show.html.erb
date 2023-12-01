@@ -40,13 +40,13 @@
 
 <h2>My Locations</h2>
 <div class='flexbox'>
-  <div class='dashcard'>
-    <div class='new-location'>
-      <%= link_to new_location_path do %>
+  <%= link_to new_location_path do %>
+    <div class='dashcard' style="background: #9FB7B9" >
+      <div class='new-location'>
         <i class="fa-solid fa-plus fa-2xl" style="color: #ffffff;"></i>
-      <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
   <% @locations.each do |location| %>
     <%= link_to location_path(location) do %>
       <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= location.image_url %>)">
