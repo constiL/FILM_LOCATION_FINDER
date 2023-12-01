@@ -1,0 +1,7 @@
+
+<div class="location_card">
+  <%= link_to location_path(location) do %>
+    <div class="location_image" id="Main Image" style=" background-image: url(<%= asset_path(location.image_url) %>)"></div>
+    <h2><%= location.name %>
+  <% end %>
+</div>
