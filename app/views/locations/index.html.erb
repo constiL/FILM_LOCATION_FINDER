@@ -1,9 +1,23 @@
-<h1>All locations</h1>
-<ul>
+<h1>Filming Themes</h1>
+
+<div class="flexbox">
   <% @locations.each do |location| %>
-    <li><%= link_to location.name, location_path(location) %></li>
-    <img id="Main Image" src="<%= asset_path(location.image_url) %>">
+    <%= link_to location_path(location) do %>
+     <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= location.image_url %>)">
+        <div class='card-content'>
+          <h4><%= location.name %></h4>
+        </div>
+      </div>
+    <% end %>
   <% end %>
+</div>
+
+<div id="map" style="width: 100%; height: 300px;"></div>
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 </ul>
 
 <div id="map" style="width: 100%; height: 300px;"></div>

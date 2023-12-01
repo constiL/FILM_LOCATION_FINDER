@@ -14,15 +14,14 @@
 }
 
 .title-image {
-  height: 100px;
-  width: 100px;
+  height: 580px;
+  width: 1000px;
   background-size: cover;
   background-position: center;
+  box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px
 }
 
-.description {
-
-}
 .description-booking {
   padding-left: 20px;
 }
