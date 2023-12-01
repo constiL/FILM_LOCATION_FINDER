@@ -109,17 +109,6 @@ elegant_manor = {
     image_url: 'https://st.hzcdn.com/simgs/pictures/exteriors/elegant-georgian-manor-house-and-garden-douglas-c-lynn-llc-landscape-architecture-img~9c117e7f0038fed7_4-9190-1-370252c.jpg',
     cost_per_day: "1000"
 }
-lakeview_cabin = {
-  name: 'Lakeview Cabin',
-  address: 'John-F.-Kennedy-Platz, 10825 Berlin, Germany',
-  city: 'Berlin',
-  rooms: 3,
-  user: User.all.sample,
-  style: styles.sample,
-  description: 'Enjoy serene lake views from this cozy cabin.',
-  image_url: 'https://images.adsttc.com/media/images/5f5f/c524/63c0/178c/4900/09a8/large_jpg/The_Lake_Cabin_High_Res_(59).jpg?1600111853',
-  cost_per_day: "50"
-}
 
 zen_garden = {
   name: 'Zen Garden Retreat',
