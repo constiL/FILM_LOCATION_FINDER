@@ -17,7 +17,7 @@ User.create!(email: "jamie@jamie.com", password: "123456")
 User.create!(email: "thomas@thomas.com", password: "123456")
 User.create!(email: "bruno@bruno.com", password: "123456")
 
-puts "Creating 10 locations...."
+puts "Creating 12 locations...."
 cozy_cabin =   {
   name: 'Cozy Cabin Retreat',
   address: 'Hasenauerstr 2, 1190 Wien',
@@ -126,7 +126,43 @@ zen_garden = {
   cost_per_day: "1500"
 }
 
-[cozy_cabin, urban_lost_oasis, sunny_beach_house, mountain_retreat_lodge, pent_house, riverside, downtown_loft, elegant_manor, lakeview_cabin, zen_garden]. each do |attributes|
+mountain_chalet = {
+  name: 'Mountain Chalet',
+  address: 'Lastenstraße 38/EG, 4020 Linz',
+  city: 'Linz',
+  rooms: 6,
+  user: User.all.sample,
+  style: styles.sample,
+  description: 'Escape to the mountains in this spacious chalet.',
+  image_url: 'https://www.daschaletdorf.com/upload/heading/pure-pitztal-mountain-chalet-plus-deluxe-or-family-1500x750.jpg',
+  cost_per_day: "100"
+}
+
+secluded_island_villa = {
+  name: 'Secluded Island Villa',
+  address: '00165 Rome, Metropolitan City of Rome Capital, Italy',
+  city: 'Rome',
+  rooms: 4,
+  user: User.all.sample,
+  style: styles.sample,
+  description: 'Experience luxury on a secluded island with this villa.',
+  image_url: 'https://www.oluxuryvillas.com/img/villa/image/private_island_villa_in_randheli_maldives113-0.jpg',
+  cost_per_day: "450"
+}
+
+artistic_loft_space = {
+  name: 'Artistic Loft Space',
+  address: 'Rathausgasse 9, 81241 München, Germany',
+  city: 'Munich',
+  rooms: 2,
+  user: User.all.sample,
+  style: styles.sample,
+  description: 'Live and create in this inspiring loft space.',
+  image_url: 'https://www.bostonmagazine.com/wp-content/uploads/sites/2/2020/06/summer-1.jpg',
+  cost_per_day: "350"
+}
+
+[artistic_loft_space, secluded_island_villa, mountain_chalet, cozy_cabin, urban_lost_oasis, sunny_beach_house, mountain_retreat_lodge, pent_house, riverside, downtown_loft, elegant_manor, zen_garden]. each do |attributes|
   location = Location.create!(attributes)
   puts "Created #{location.name}"
 end
