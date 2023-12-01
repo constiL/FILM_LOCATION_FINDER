@@ -2,10 +2,8 @@
 .dashcard {
   color: white;
   text-align: center;
-  width: 250px;
   height: 250px;
   padding: 5px;
-  margin: 5px;
   border-radius: 10px;
   background-size: cover;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
@@ -15,15 +13,11 @@
 
 .dashcard:hover {  box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.5); }
 
-.flexbox {
-  margin: 5px;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.home-card {
-  width: 250px;
+.my-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 8px;
 }
 
 .dashcard img {

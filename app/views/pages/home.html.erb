@@ -19,7 +19,7 @@
 </div> %>
 
 
-  <div class="flexbox">
+  <div class="my-grid">
   <% @locations.first(4).each do |location| %>
     <%= link_to location_path(location) do %>
      <div class='dashcard home-card' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= location.image_url %>)">
