@@ -5,7 +5,8 @@
         <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= booking.location.image_url %>)">
           <div class='card-content'>
             <h4><%= booking.location.name %></h4>
-            <h6><%= booking.start_date.strftime('%a %x') %> - <%= booking.end_date.strftime('%a %x') %></h6>
+            <h6><%= booking.start_date.strftime('%a %x') %> - </h6>
+            <h6><%= booking.end_date.strftime('%a %x') %></h6>
             <% if booking.approved? %>
               <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
             <% else %>
@@ -25,7 +26,8 @@
           <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= booking.location.image_url %>)" >
             <div class='card-content'>
               <h4><%= booking.location.name %></h4>
-              <h6><%= booking.start_date.strftime('%a %x') %> - <%= booking.end_date.strftime('%a %x') %></h6>
+              <h6><%= booking.start_date.strftime('%a %x') %> - </h6>
+              <h6><%= booking.end_date.strftime('%a %x') %></h6>
               <% if booking.approved? %>
                 <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
               <% else %>
