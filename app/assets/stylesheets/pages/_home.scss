@@ -27,13 +27,13 @@ h1, h2, h3, ul, p, body {
 .wrapper {
   height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
 }
 
 .footer {
   flex: 1;
 }
 
-.navbar {
-  position: sticky;
+.container {
+  margin-top: 10git0px;
 }
