@@ -11,7 +11,11 @@
 styles = %w[modern minimalistic rustic chic mediterranean]
 puts "Cleaning the database...."
 Location.destroy_all
+User.destroy_all
 User.create!(email: "colerner@me.com", password: "123456")
+User.create!(email: "jamie@jamie.com", password: "123456")
+User.create!(email: "thomas@thomas.com", password: "123456")
+User.create!(email: "bruno@bruno.com", password: "123456")
 
 puts "Creating 10 locations...."
 cozy_cabin =   {
