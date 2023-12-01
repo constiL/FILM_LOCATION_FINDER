@@ -3,6 +3,7 @@
   <%= simple_form_for @location do |f| %>
     <%= f.input :name %>
     <%= f.input :description %>
+    <%= f.input :address %>
     <%= f.input :city %>
     <%= f.input :style, collection: %w(modern minimalistic rustic chic mediterranean) %>
     <%= f.input :rooms %>
