@@ -13,53 +13,54 @@
   </head>
 
   <body>
-  <div class="navbar navbar-expand-sm">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "" %>
-    <% end %>
-    <%#= link_to "Home", "#", class: "nav-link" %>
+    <div class="wrapper">
+      <!-- Navbar -->
+      <div class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+          <%= link_to "#", class: "navbar-brand" do %>
+            <%= image_tag "" %>
+          <% end %>
+          <%#= link_to "Home", "#", class: "nav-link" %>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to "Home", root_path , class: "nav-link", style: "color: white" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "About", about_path, class: "nav-link", style: "color: white" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Locations", locations_path, class: "nav-link", style: "color: white" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Dashboard", dashboard_path, class: "nav-link", style: "color: white" %>
-          </li>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <% if user_signed_in? %>
+                <li class="nav-item">
+                  <%= link_to "Home", root_path , class: "nav-link", style: "color: white" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "About", about_path, class: "nav-link", style: "color: white" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Locations", locations_path, class: "nav-link", style: "color: white" %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "Dashboard", dashboard_path, class: "nav-link", style: "color: white" %>
+                </li>
+              <% else %>
+                <li class="nav-item">
+                  <%= link_to "Login", new_user_session_path, class: "nav-link", style: "color: white" %>
+                </li>
+              <% end %>
+            </ul>
+            <div class="title">
+              <h1> Film Location Finder </h1>
             </div>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link", style: "color: white" %>
-          </li>
-        <% end %>
-      </ul>
-        <div class="title">
-    <h1> Film Location Finder </h1>
-  </div>
-    </div>
-  </div>
-</div>
-<div class="container">
-    <%= yield %>
-</div>
+          </div>
+        </div>
+      </div>
 
-<div class="footer">
-  <div class="co">Location Finder co.
-  </div>
-  <div class="footer-copyright">This website was coded with
-      <i class="fas fa-heart"></i>
-       at Le Wagon
-    </div>
-</div>
+      <!-- Content -->
+      <div class="container">
+          <%= yield %>
+      </div>
 
+      <!-- Footer -->
+      <div class="footer">
+        <div class="co">Location Finder co.</div>
+        <div class="footer-copyright">
+          This website was coded with <i class="fas fa-heart"></i> at Le Wagon</div>
+      </div>
+    </div>
   </body>
 </html>
