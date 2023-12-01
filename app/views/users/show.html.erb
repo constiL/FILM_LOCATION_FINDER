@@ -1,21 +1,59 @@
-<h1>My Dashboard</h1>
-<h2>My Bookings</h2>
-  <% @bookings.each do |booking| %>
-    <%= booking.dates %>
-    <%= link_to booking.location.name, user_booking_path(@user, booking) %>
-  <% end %>
-
-<h2>Hosted Bookings</h2>
-  <% @locations.each do |location| %>
-    <% location.bookings.each do |booking| %>
-      <%= booking.location.name %>
-      <%= booking.dates %>
-      <%= link_to 'Edit this booking', edit_user_booking_path(@user, booking) %>
+  <h2>My Upcoming Filming</h2>
+  <div class='flexbox'>
+    <% @bookings.each do |booking| %>
+      <%= link_to user_booking_path(booking.user, booking) do %>
+        <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= booking.location.image_url %>)">
+          <div class='card-content'>
+            <h4><%= booking.location.name %></h4>
+            <h6><%= booking.start_date %> - <%= booking.end_date %></h6>
+            <% if booking.approved? %>
+              <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+            <% else %>
+              <i class="fa-regular fa-circle-question" style="color: #ffffff;"></i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 
+  <h2>Who is coming to film?</h2>
+  <div class='flexbox'>
+    <% @locations.each do |location| %>
+      <% location.bookings.each do |booking| %>
+        <%= link_to edit_user_booking_path(@user, booking) do %>
+          <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= booking.location.image_url %>)" >
+            <div class='card-content'>
+              <h4><%= booking.location.name %></h4>
+              <h6><%= booking.start_date %> - <%= booking.end_date %></h6>
+              <% if booking.approved? %>
+                <i class="fa-regular fa-circle-check" style="color: #ffffff;"></i>
+              <% else %>
+                <i class="fa-regular fa-circle-question" style="color: #ffffff;"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
 
 <h2>My Locations</h2>
-  <% @locations.each do|location| %>
-    <%= link_to location.name, location_path(location) %>
+<div class='flexbox'>
+  <div class='dashcard'>
+    <div class='new-location'>
+      <%= link_to new_location_path do %>
+        <i class="fa-solid fa-plus fa-2xl" style="color: #ffffff;"></i>
+      <% end %>
+    </div>
+  </div>
+  <% @locations.each do |location| %>
+    <%= link_to location_path(location) do %>
+      <div class='dashcard' style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(<%= location.image_url %>)">
+        <div class='card-content'>
+          <h4><%= location.name %></h4>
+        </div>
+      </div>
+    <% end %>
   <% end %>
+</div>
