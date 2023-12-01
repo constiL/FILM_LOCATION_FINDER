@@ -35,7 +35,7 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
     @location.user = current_user
     @location.destroy!
-    redirect_to locations_path, notice: "Location was successfully destroyed", status: :see_other
+    redirect_to dashboard_path, notice: "Location was successfully destroyed", status: :see_other
   end
 
   private

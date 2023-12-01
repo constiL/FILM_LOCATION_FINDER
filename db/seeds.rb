@@ -50,7 +50,7 @@ sunny_beach_house = {
   user: User.all.sample,
   style: styles.sample,
   description: 'A beautiful beach house with stunning ocean views.',
-  image_url: 'https://thecottagejournal.com/wp-content/uploads/2022/06/TheCottageJournal_Exterior-1.jpg',
+  image_url: 'https://bamabeachhouses.com/wp-content/uploads/2022/05/blue-hero.jpg',
   cost_per_day: "100"
 }
 
@@ -122,7 +122,7 @@ zen_garden = {
   user: User.all.sample,
   style: styles.sample,
   description: 'Find peace and relaxation in this zen garden retreat.',
-  image_url: 'https://amitmurao.com/wp-content/uploads/2019/08/amitmurao_beautiful_zen_garden_ideas_1519b0d4-898a-46b7-8d8d-59485f05a2e9.jpg',
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Kyoto-Ryoan-Ji_MG_4512.jpg',
   cost_per_day: "1500"
 }
 
@@ -146,7 +146,7 @@ secluded_island_villa = {
   user: User.all.sample,
   style: styles.sample,
   description: 'Experience luxury on a secluded island with this villa.',
-  image_url: 'https://www.oluxuryvillas.com/img/villa/image/private_island_villa_in_randheli_maldives113-0.jpg',
+  image_url: 'https://d3hk78fplavsbl.cloudfront.net/assets/common-prod/hotel/300/jp22260060186/jp22260060186-1-hotel_carousel_large.jpg?version=16',
   cost_per_day: "450"
 }
 
