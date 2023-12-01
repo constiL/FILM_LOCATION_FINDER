@@ -1,10 +1,10 @@
 <h1>Edit your booking</h1>
-<div class="container">
+<div class="simple">
   <%= simple_form_for [@user, @booking] do |f| %>
     <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
     <%= f.input :end_date, as: :string, input_html: { data: { controller: "datepicker" } } %>    <%= f.input :offer %>
     <%= f.input :visited %>
     <%= f.input :approved %>
-    <%= f.submit 'Amend Booking', class: "btn btn-primary" %>
+    <%= f.submit 'Amend Booking', class: "btn" %>
   <% end %>
 </div>
