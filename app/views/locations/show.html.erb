@@ -12,13 +12,13 @@
 
   <div class="description-booking">
       <ul class="description">
-        <li>Description:<%= @location.description %></li>
-        <li>City: <%= @location.city %></li>
-        <li>Address:<%= @location.address %></li>
-        <li>Style: <%= @location.style %></li>
-        <li>Rooms: <%= @location.rooms %></li>
-        <li>Cost Per Day: <%= @location.cost_per_day %></li>
-        <li>Outdoor Space: <%= @location.outdoor_space? ? "Yes" : "No" %></li>
+        <li><strong><%= @location.description %></strong></li>
+        <li><i class="fa-solid fa-city" style="color: #000000;"> </i> <%= @location.city %></li>
+        <li><i class="fa-solid fa-location-dot" style="color: #000000;"></i> <%= @location.address %></li>
+        <li><i class="fa-solid fa-house" style="color: #000000;"> </i><%= @location.style %></li>
+        <li><i class="fa-solid fa-door-open" style="color: #000000;"> </i><%= @location.rooms %></li>
+        <li><i class="fa-solid fa-euro-sign" style="color: #000000;"> </i></i><%= @location.cost_per_day %></li>
+        <li><i class="fa-solid fa-tree" style="color: #000000;"> </i><%= @location.outdoor_space? ? "Yes" : "No" %></li>
       </ul>
 
         <h2>New Booking</h2>
