@@ -1,31 +1,32 @@
-.location {
-display: flex;
-align-items: flex-start;
-justify-content: center;
-}
-
-#title_image {
-height: 500px;
-width: 800px;
-background-size: cover;
-background-position: center;
-}
-
-ul {
-  list-style-type: circle;
+.title-flex {
+  display: flex;
+  margin-top: 20px;
 }
 
 .trashcan {
   margin: 20px;
+  margin-top: 25px;
 }
 
-.booking_form {
-margin-left: 20px;
+.main-flex {
+  display: flex;
+  margin-bottom: 145px;
 }
 
-.btn {
-  color: #ffffff;
-  border: 5px white;
-  border-radius: 5px;
-  background-color: #9FB7B9;
+.title-image {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  background-position: center;
+}
+
+.description {
+
+}
+.description-booking {
+  padding-left: 20px;
+}
+
+ul {
+  list-style-type: circle;
 }
